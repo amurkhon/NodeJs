@@ -71,16 +71,51 @@ const validator = require('validator');
 // console.log("check: ", check);
 
 
-const { v4: uuidv4 } = require('uuid');
-const random = uuidv4();
-console.log("random uuid: ", random);
+// const { v4: uuidv4 } = require('uuid');
+// const random = uuidv4();
+// console.log("random uuid: ", random);
 
-const chalk = require("chalk");
-const log = console.log
+// const chalk = require("chalk");
+// const log = console.log
 
-log(chalk.red(`uuid creates ${random}`));
+// log(chalk.gray(`uuid creates ${random}`));
+
+console.log(module)
 
 
 
 
 // Module package FILE
+
+const calculate = require('./hisob.js');
+
+const natija = calculate.kopaytirish(20, 4);
+console.log("Natija:", natija);
+console.log('********************')
+
+const natija2 = calculate.bolish(20, 4);
+console.log("Natija2:", natija2);
+console.log('********************')
+
+const natija3 = calculate.ayirish(20, 4);
+console.log("Natija3:", natija3);
+console.log('********************')
+
+const Account = require('./account.js');
+
+Account.tellMeAboutClass();
+Account.tellMeTime();
+
+console.log('<========================>')
+
+const myAccount = new Account('Khan', 200000, 20210020928);
+myAccount.giveMeDetails();
+
+myAccount.makeDeposit(1000000);
+
+// ferrari 400000 usd
+myAccount.withdrawMoney(400000);
+myAccount.makeDeposit(200000);
+
+console.log(require('module').builtinModules);
+
